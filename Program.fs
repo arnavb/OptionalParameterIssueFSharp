@@ -1,4 +1,6 @@
-﻿open Discord
+﻿// The code below runs as expected in .NET 8.0.300, but breaks in previous versions. Why?
+
+open Discord
 
 let testCommandBuilder =
     (new SlashCommandBuilder())
