@@ -6,19 +6,6 @@ on:
       - main
 
 jobs:
-  build_105:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: '8.0.105'
-      - run: |
-          dotnet new globaljson --sdk-version 8.0.105 --force
-          dotnet --version
-          dotnet run
-          dotnet fsi script.fsx
   build_204:
     runs-on: ubuntu-latest
 
@@ -41,7 +28,6 @@ jobs:
         with:
           dotnet-version: '8.0.300'
       - run: |
-          dotnet new globaljson --sdk-version 8.0.300 --force
           dotnet --version
           dotnet run
           dotnet fsi script.fsx
