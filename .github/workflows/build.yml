@@ -16,7 +16,7 @@ jobs:
           dotnet-version: '8.0.204'
       - name: Version setup / checks
         run: |
-          dotnet new globaljson --sdk-version 8.0.300 --force
+          dotnet new globaljson --sdk-version 8.0.204 --force
           dotnet --version
       - run: |
           dotnet run
