@@ -14,9 +14,11 @@ jobs:
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '8.0.204'
-      - run: |
-          dotnet new globaljson --sdk-version 8.0.204 --force
+      - name: Version setup / checks
+        run: |
+          dotnet new globaljson --sdk-version 8.0.300 --force
           dotnet --version
+      - run: |
           dotnet run
   build_300:
     runs-on: ubuntu-latest
@@ -26,6 +28,9 @@ jobs:
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '8.0.300'
-      - run: |
+      - name: Version setup / checks
+        run: |
+          dotnet new globaljson --sdk-version 8.0.300 --force
           dotnet --version
+      - run: |
           dotnet run
