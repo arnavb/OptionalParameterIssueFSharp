@@ -14,10 +14,10 @@ jobs:
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '8.0.105'
-      - run:
-          - dotnet --version
-          - dotnet run
-          - dotnet fsi script.fsx
+      - run: |
+          dotnet --version
+          dotnet run
+          dotnet fsi script.fsx
   build_204:
     runs-on: ubuntu-latest
 
@@ -26,10 +26,10 @@ jobs:
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '8.0.204'
-      - run:
-          - dotnet --version
-          - dotnet run
-          - dotnet fsi script.fsx
+      - run: |
+          dotnet --version
+          dotnet run
+          dotnet fsi script.fsx
   build_300:
     runs-on: ubuntu-latest
 
@@ -38,7 +38,7 @@ jobs:
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '8.0.300'
-      - run:
-          - dotnet --version
-          - dotnet run
-          - dotnet fsi script.fsx
+      - run: |
+          dotnet --version
+          dotnet run
+          dotnet fsi script.fsx
